@@ -29,22 +29,22 @@ const AddPlayerForm = () => {
   };
   
   return (
-    <div className="bg-black p-2 rounded-b-lg">
+    <div className="p-0 rounded-b-lg">
       {players.length < 8 && (
         <form 
           onSubmit={handleSubmit} 
-          className="flex items-center justify-center"
+          className="grid grid-cols-3 md:grid-cols-4 gap-2 lg:grid-cols-7 py-2"
         >
           <input
             type="text"
             value={name}
             onChange={handleChange}
             placeholder="Enter Player Name"
-            className="border border-gray-300 text-neutral rounded-md p-2 mr-2 focus:outline-none focus:border-blue-500"
+            className="border col-span-2 md:col-span-3 lg:col-span-6 border-gray-300 text-neutral p-2 rounded-md focus:outline-none focus:border-blue-500"
           />
           <button 
             type="submit"
-            className="bg-primary hover:bg-blue-500 text-base-100 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-primary hover:bg-blue-500 text-base-100 font-bold w-full justify-self-end py-2 px-2 rounded focus:outline-none focus:shadow-outline"
           >
             Add Player
           </button>

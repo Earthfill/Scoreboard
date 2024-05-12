@@ -12,7 +12,7 @@ const Player = () => {
     )
   }
 
-  const highestScore = Math.max(...players.map(player => player.score), 0);
+  const highestScore = Math.max(...players.map(player => player.score), 1);
   
   return (
     <div className="grid text-base-100 bg-primary text-lg rounded-lg py-5 px-2">
